@@ -36,10 +36,10 @@ greeting = say_name('Bill')
 print(greeting)
 
 
-def sum(num1, num2):
+def sum_num(num1, num2):
     num1 + num2
 
-print(sum(1, 2))
+print(sum_num(1, 2))
 
 def outer():
     a = 1
@@ -63,3 +63,12 @@ def doc_strings(arg):
 doc_strings(500)
 
 print(doc_strings.__doc__)
+
+# unlimited positional args
+def super_func(*args):
+    print(args)
+    arg_list = list(args)
+    print(arg_list)
+    return sum(arg_list)
+
+print(super_func(1, 2, 3, 4, 5))
